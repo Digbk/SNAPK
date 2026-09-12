@@ -1,0 +1,6 @@
+{
+  "name": "One Minute",
+  "description": "Daily 60-second social challenges for kids, teens, adults, and families with viral Challenge Chains and Private Family Circles.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
