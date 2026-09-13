@@ -1,6 +1,6 @@
 {
-  "name": "One Minute",
-  "description": "Daily 60-second social challenges for kids, teens, adults, and families with viral Challenge Chains and Private Family Circles.",
+  "name": "SNAPK",
+  "description": "SNAPK - Daily 60-second social challenges, viral challenge chains, and family memory book.",
   "requestFramePermissions": [],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }

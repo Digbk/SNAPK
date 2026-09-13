@@ -30,6 +30,7 @@ import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.example.data.local.entities.ChallengeEntity
 import com.example.data.model.ChallengeCategory
 import com.example.ui.components.CategoryChip
+import com.example.ui.components.SnapkHeader
 import com.example.ui.components.StreakFlameBadge
 import com.example.ui.theme.*
 import com.example.ui.viewmodel.OneMinuteViewModel
@@ -59,29 +60,12 @@ fun HomeScreen(
     topBar = {
       TopAppBar(
         title = {
-          Row(
-            verticalAlignment = Alignment.CenterVertically,
-            horizontalArrangement = Arrangement.spacedBy(8.dp)
-          ) {
-            Box(
-              modifier = Modifier
-                .size(36.dp)
-                .clip(RoundedCornerShape(10.dp))
-                .background(
-                  Brush.linearGradient(listOf(IndigoPrimaryLight, CoralSecondaryLight))
-                ),
-              contentAlignment = Alignment.Center
-            ) {
-              Text("1M", color = Color.White, fontWeight = FontWeight.Black, fontSize = 14.sp)
-            }
-            Text(
-              "One Minute",
-              style = MaterialTheme.typography.titleLarge.copy(
-                fontWeight = FontWeight.Black,
-                letterSpacing = (-0.5).sp
-              )
-            )
-          }
+          SnapkHeader(
+            iconSize = 36.dp,
+            wordmarkSize = 20.sp,
+            showBadge = true,
+            badgeText = "60s"
+          )
         },
         actions = {
           StreakFlameBadge(streakDays = streakDays, modifier = Modifier.padding(end = 6.dp))

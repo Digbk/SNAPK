@@ -25,6 +25,8 @@ import androidx.compose.ui.unit.sp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.example.data.model.BadgeItem
 import com.example.ui.components.AvatarBubble
+import com.example.ui.components.SnapkLogoIcon
+import com.example.ui.components.SnapkWordmark
 import com.example.ui.components.StreakFlameBadge
 import com.example.ui.theme.*
 import com.example.ui.viewmodel.OneMinuteViewModel
@@ -441,6 +443,25 @@ fun ProfileScreen(
         }
       }
 
+      // SNAPK BRANDED FOOTER
+      item {
+        Column(
+          modifier = Modifier
+            .fillMaxWidth()
+            .padding(vertical = 16.dp),
+          horizontalAlignment = Alignment.CenterHorizontally,
+          verticalArrangement = Arrangement.spacedBy(8.dp)
+        ) {
+          SnapkLogoIcon(size = 36.dp, cornerRadius = 10.dp)
+          SnapkWordmark(fontSize = 18.sp)
+          Text(
+            text = "SNAPK v1.0 • The 60-Second Social Challenge App",
+            style = MaterialTheme.typography.labelSmall,
+            color = MaterialTheme.colorScheme.onSurfaceVariant
+          )
+        }
+      }
+
     }
   }
 
@@ -517,7 +538,7 @@ fun OnboardingDialog(
 
   val steps = listOf(
     Triple(
-      "⏱️ One Minute a Day",
+      "⏱️ 60 Seconds on SNAPK",
       "No endless scrolling. Every day you get one fun, 60-second challenge in categories like Funny, Creativity, Knowledge, and Photography. Free, positive, and safe for all ages!",
       IndigoPrimaryLight
     ),
@@ -543,7 +564,8 @@ fun OnboardingDialog(
         verticalAlignment = Alignment.CenterVertically,
         horizontalArrangement = Arrangement.spacedBy(8.dp)
       ) {
-        Text(title, fontWeight = FontWeight.Black, fontSize = 18.sp)
+        SnapkLogoIcon(size = 24.dp, cornerRadius = 6.dp)
+        Text(title, fontWeight = FontWeight.Black, fontSize = 17.sp)
       }
     },
     text = {

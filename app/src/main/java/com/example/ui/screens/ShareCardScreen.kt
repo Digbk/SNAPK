@@ -29,6 +29,8 @@ import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.example.data.local.entities.CompletionEntity
 import com.example.data.model.ChallengeCategory
 import com.example.ui.components.CategoryChip
+import com.example.ui.components.SnapkLogoIcon
+import com.example.ui.components.SnapkWordmark
 import com.example.ui.theme.*
 import com.example.ui.viewmodel.OneMinuteViewModel
 
@@ -93,13 +95,12 @@ fun ShareCardScreen(
 
   fun shareCardNative() {
     val shareText = """
-      ⚡ I just crushed the 60-second One Minute challenge:
+      ⚡ I just crushed the 60-second SNAPK challenge:
       '${completion?.challengeTitle}' in ${completion?.secondsTaken ?: 50} seconds!
       🔥 Streak: $streakDays Days
       
       Can you beat my time?
-      Join my Challenge Chain with code: 1M-9842
-      https://oneminute.app/challenge/1M-9842
+      Join my Challenge Chain on SNAPK!
     """.trimIndent()
 
     val sendIntent = Intent().apply {
@@ -215,23 +216,12 @@ fun ShareCardScreen(
             ) {
               Row(
                 verticalAlignment = Alignment.CenterVertically,
-                horizontalArrangement = Arrangement.spacedBy(6.dp)
+                horizontalArrangement = Arrangement.spacedBy(8.dp)
               ) {
-                Box(
-                  modifier = Modifier
-                    .size(26.dp)
-                    .clip(RoundedCornerShape(6.dp))
-                    .background(Color.White.copy(alpha = 0.25f)),
-                  contentAlignment = Alignment.Center
-                ) {
-                  Text("1M", color = Color.White, fontWeight = FontWeight.Black, fontSize = 11.sp)
-                }
-                Text(
-                  "ONE MINUTE",
-                  color = currentPalette.textColor,
-                  fontWeight = FontWeight.Black,
-                  letterSpacing = 1.sp,
-                  fontSize = 13.sp
+                SnapkLogoIcon(size = 28.dp, cornerRadius = 7.dp)
+                SnapkWordmark(
+                  fontSize = 15.sp,
+                  textColor = currentPalette.textColor
                 )
               }
 
@@ -298,7 +288,7 @@ fun ShareCardScreen(
                   "DRAWING" -> {
                     Text("🎨 Speed Doodle Finished!", fontWeight = FontWeight.Bold, color = Color.White)
                     Text(
-                      "Completed in ${completion?.secondsTaken ?: 48}s on One Minute canvas!",
+                      "Completed in ${completion?.secondsTaken ?: 48}s on SNAPK canvas!",
                       color = Color.White.copy(alpha = 0.85f),
                       fontSize = 12.sp,
                       textAlign = TextAlign.Center
@@ -357,7 +347,7 @@ fun ShareCardScreen(
                   )
                 )
                 Text(
-                  "Chain Code: 1M-9842",
+                  "SNAPK Chain: SNAP-9842",
                   style = MaterialTheme.typography.labelSmall.copy(
                     color = Color.White.copy(alpha = 0.7f)
                   )

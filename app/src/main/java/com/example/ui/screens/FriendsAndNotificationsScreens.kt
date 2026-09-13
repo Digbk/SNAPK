@@ -62,11 +62,11 @@ fun FriendsScreen(
       action = Intent.ACTION_SEND
       putExtra(
         Intent.EXTRA_TEXT,
-        "⚡ Join me on One Minute! Add me with invite code: 1M-ALEX-77 and let's trade daily 60-second challenges!\nhttps://oneminute.app/add/1M-ALEX-77"
+        "⚡ Join me on SNAPK! Add me with invite code: SNAP-ALEX-77 and let's trade daily 60-second challenges!\nhttps://snapk.app/add/SNAP-ALEX-77"
       )
       type = "text/plain"
     }
-    context.startActivity(Intent.createChooser(sendIntent, "Invite Friend to One Minute"))
+    context.startActivity(Intent.createChooser(sendIntent, "Invite Friend to SNAPK"))
   }
 
   Scaffold(
@@ -126,7 +126,7 @@ fun FriendsScreen(
                 color = MaterialTheme.colorScheme.primary
               ) {
                 Text(
-                  "1M-ALEX-77",
+                  "SNAP-CHAMP-77",
                   modifier = Modifier.padding(horizontal = 10.dp, vertical = 4.dp),
                   style = MaterialTheme.typography.labelMedium.copy(
                     fontWeight = FontWeight.Black,

@@ -22,6 +22,6 @@ dependencyResolutionManagement {
   }
 }
 
-rootProject.name = "One Minute"
+rootProject.name = "SNAPK"
 
 include(":app")

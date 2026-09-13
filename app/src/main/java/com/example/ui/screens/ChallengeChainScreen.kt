@@ -56,7 +56,7 @@ fun ChallengeChainScreen(
       action = Intent.ACTION_SEND
       putExtra(
         Intent.EXTRA_TEXT,
-        "🔥 Join my Challenge Chain on One Minute! Beat my 60-second time with invite code: $code\nhttps://oneminute.app/chain/$code"
+        "🔥 Join my Challenge Chain on SNAPK! Beat my 60-second time with invite code: $code\nhttps://snapk.app/chain/$code"
       )
       type = "text/plain"
     }

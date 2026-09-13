@@ -68,7 +68,7 @@ class OneMinuteRepository(private val database: AppDatabase) {
     friendNames: List<String>
   ) = withContext(Dispatchers.IO) {
     val chainId = "chain_${UUID.randomUUID().toString().take(6)}"
-    val code = "1M-${(1000..9999).random()}"
+    val code = "SNAP-${(1000..9999).random()}"
     val chain = ChainEntity(
       id = chainId,
       originChallengeId = originChallengeId,
@@ -395,7 +395,7 @@ class OneMinuteRepository(private val database: AppDatabase) {
     // Seed Notifications
     val notifications = listOf(
       AppNotificationEntity(
-        title = "Welcome to One Minute! ⚡",
+        title = "Welcome to SNAPK! ⚡",
         message = "Today's 60-second challenge 'Draw a Super-Pet' is live! Beat the clock to start your streak.",
         type = "DAILY_DROP",
         isRead = false

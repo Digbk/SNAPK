@@ -55,7 +55,7 @@ fun MemoryBookScreen(
       
       ${filteredResponses.joinToString("\n\n") { "• ${it.authorName} (${it.authorRole}): \"${it.textContent}\"\n  [${it.stickerTag}]" }}
       
-      Created with One Minute App.
+      Created with SNAPK App.
     """.trimIndent()
 
     val sendIntent = Intent().apply {

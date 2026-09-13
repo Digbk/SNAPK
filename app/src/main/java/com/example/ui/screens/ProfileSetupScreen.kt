@@ -35,6 +35,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.example.ui.components.SnapkHeroBrand
 import com.example.ui.components.AvatarBubble
 import com.example.ui.theme.CoralSecondaryLight
 import com.example.ui.theme.IndigoPrimaryLight
@@ -85,40 +86,18 @@ fun ProfileSetupScreen(
         // HERO BRANDING
         Column(
           horizontalAlignment = Alignment.CenterHorizontally,
-          verticalArrangement = Arrangement.spacedBy(8.dp),
+          verticalArrangement = Arrangement.spacedBy(10.dp),
           modifier = Modifier.padding(top = 8.dp)
         ) {
-          Surface(
-            modifier = Modifier.size(64.dp),
-            shape = CircleShape,
-            color = MaterialTheme.colorScheme.primary,
-            shadowElevation = 6.dp
-          ) {
-            Box(contentAlignment = Alignment.Center) {
-              Icon(
-                imageVector = Icons.Default.Bolt,
-                contentDescription = "One Minute Logo",
-                tint = Color.White,
-                modifier = Modifier.size(36.dp)
-              )
-            }
-          }
+          SnapkHeroBrand(iconSize = 72.dp)
 
           Text(
-            text = "Welcome to One Minute",
-            style = MaterialTheme.typography.headlineSmall.copy(
-              fontWeight = FontWeight.Black,
-              letterSpacing = (-0.5).sp
-            ),
-            textAlign = TextAlign.Center
-          )
-
-          Text(
-            text = "Daily 60-second social challenges with friends & family. Let's create your champion profile to get started:",
+            text = "Daily 60-second social challenges with friends & family. Set up your champion profile to get started:",
             style = MaterialTheme.typography.bodyMedium,
             color = MaterialTheme.colorScheme.onSurfaceVariant,
             textAlign = TextAlign.Center,
-            lineHeight = 20.sp
+            lineHeight = 20.sp,
+            modifier = Modifier.padding(horizontal = 8.dp)
           )
         }
 
@@ -396,7 +375,7 @@ fun ProfileSetupScreen(
             horizontalArrangement = Arrangement.spacedBy(8.dp)
           ) {
             Text(
-              "Start One Minute",
+              "Start SNAPK",
               style = MaterialTheme.typography.titleMedium.copy(fontWeight = FontWeight.Bold)
             )
             Icon(Icons.Default.ArrowForward, contentDescription = null)
